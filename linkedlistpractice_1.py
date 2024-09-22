@@ -92,6 +92,16 @@ class linkedList:
         new_node.next = middle_node.next
         middle_node.next = new_node
 
+    def reverse_linkedList(self):
+        current = self.head
+        prev = None
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+
     
         
 LL = linkedList()
